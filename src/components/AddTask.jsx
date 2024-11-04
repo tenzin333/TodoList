@@ -12,6 +12,7 @@ const AddTask = ({
   showShouldMain = false,
   showQuickAddTask,
   setShowQuickAddTask,
+  setShouldShowMain
 }) => {
   const [task, setTask] = useState("");
   const [taskDate, setTaskDate] = useState("");

@@ -16,10 +16,10 @@ const AddProject = ({ shouldShow = false }) => {
   // Add a new document in collection "cities"
   const addProject = () => {
     projectName &&
-      setDoc(doc(db, "projects", userId), {
+      setDoc(doc(db, "projects",projectId), {
         name: projectName,
-        userId: userId,
         projectId,
+        userId:userId
       }).then(() => {
         setProjects([]);
         setProjectName("");

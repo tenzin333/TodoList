@@ -418,17 +418,28 @@
    
    /* Show Confirm Delete
      ============================================ */
-   .project-delete-modal {
-     position: relative;
-   
-     &__inner {
-       @include box-overlay();
-       z-index: 99;
-       width: 200px;
-       padding: 10px;
-       top: 10px;
-       right: 0;
-       background-color: white;
+    .project-delete-modal {
+      position: relative;
+      width: 200px;
+      height: 100%;
+    
+      &__inner {
+        //  @include box-overlay();
+        position: absolute;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        z-index: 99;
+        width: 200px;
+        padding: 10px;
+        top: 10px;
+        right:80px;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
    
        p {
          margin-top: 5px;
@@ -436,15 +447,26 @@
          line-height: normal;
          font-weight: normal;
          font-size: 15px;
+         grid-row:1;
+         justify-items: center;
+         text-align: center;
        }
    
-       button {
-         @include btn('50px');
+       .delete-modal-button-container{
+        display: flex; // Enable Flexbox for buttons
+        justify-content: space-between; // Space between buttons
+        button {
+          @include btn('50px');
+         
+        }
+        span {
+          @include cancel();
+          font-weight: normal;
+          align-self: center; 
+         
+        }
        }
-       span {
-         @include cancel();
-         font-weight: normal;
-       }
+     
      }
    }
    
@@ -454,7 +476,7 @@
      display: grid;
      -webkit-box-align: center;
          -ms-flex-align: center;
-      align-items: center;
+             align-items: center;
      grid-template-columns: 1fr auto;
      max-width: 922px;
      margin: auto;
@@ -645,37 +667,25 @@
      &__list li {
        @include task-item();
        padding: 0;
-      
-       span{
-        display: flex;
-        align-items: center;
-        margin-right: 5px;
-        padding: 3px;
-       
-        svg{
-          fill:grey;
-        }
-       
-      }
    
-      //  div:nth-child(1) {
-      //    padding: 10px;
-      //    width: 100%;
-      //    display: -webkit-box;
-      //    display: -ms-flexbox;
-      //    display: flex;
-      //    -webkit-box-align: center;
-      //        -ms-flex-align: center;
-      //            align-items: center;
+       div:nth-child(1) {
+         padding: 10px;
+         width: 100%;
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
    
-      //    span:first-of-type {
-      //      margin-right: 10px;
+         span:first-of-type {
+           margin-right: 10px;
    
-      //      svg {
-      //        fill: grey;
-      //      }
-      //    }
-      //  }
+           svg {
+             fill: grey;
+           }
+         }
+       }
      }
    }
    

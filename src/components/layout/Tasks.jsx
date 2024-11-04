@@ -17,11 +17,11 @@ const Tasks = () => {
 
     
     if (collatedTasksExist(selectedProject) && selectedProject) {
-        projectName = getCollatedTitle(collatedTasks, selectedProject).name;
+        projectName =  getCollatedTitle(collatedTasks, selectedProject).name;
       }
     
       if (
-        projects &&
+        projects && 
         projects.length > 0 &&
         selectedProject &&
         !collatedTasksExist(selectedProject)

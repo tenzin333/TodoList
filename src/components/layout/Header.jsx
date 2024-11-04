@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {FaPizzaSlice} from "react-icons/fa";
 import AddTask from '../AddTask';
+import Logo from '../../assets/logo.svg';
 
 const Header = ({darkMode,setDarkMode}) => {
 
@@ -13,7 +14,7 @@ const Header = ({darkMode,setDarkMode}) => {
     <header className="header" data-testid="header">
         <nav>
             <div className='logo'>
-                <img src="/images/logo.png" alt="TodoL" />
+                <img src={Logo} alt="TodoList" />
             </div>
             <div className="settings">
                 <ul>
@@ -30,6 +31,7 @@ const Header = ({darkMode,setDarkMode}) => {
                shouldShowMain={shouldShowMain}
                showQuickAddTask={showQuickAddTask}
                setShowQuickAddTask={setShowQuickAddTask}
+               setShouldShowMain={setShouldShowMain}
 
                 />
             )}
