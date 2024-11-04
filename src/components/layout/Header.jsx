@@ -15,7 +15,7 @@ const Header = ({darkMode,setDarkMode}) => {
         <nav>
             <div className='logo'>
                 <img src={Logo} alt="TodoList" />
-            </div>
+            </div >
             <div className="settings">
                 <ul>
                     <li data-testid="quck-add-task-action" className="settings__add" onClick={() => {
