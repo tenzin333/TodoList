@@ -14,7 +14,7 @@ const Header = ({darkMode,setDarkMode}) => {
     <header className="header" data-testid="header">
         <nav>
             <div className='logo'>
-                <img src={Logo} alt="TodoList" />
+                <img src={Logo} alt="TodoList"  />
             </div >
             <div className="settings">
                 <ul>
